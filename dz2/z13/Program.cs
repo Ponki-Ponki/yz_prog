@@ -19,3 +19,27 @@ NumDec(num);
 NumDec(645);
 NumDec(78);
 NumDec(32679);
+
+// Второй метод решение (решение подсказал другой ученик)
+
+int Num(int n)
+{
+    if (num > 99)
+    {
+        while (num > 999)
+        {
+            num = num / 10;
+        }
+        int digit3 = num % 10;
+        return digit3;
+    }
+    else return -1;
+}
+
+int number = Num(num);
+Console.WriteLine(number == -1 ? "Нет третьей цифры" : $"третья цифра: {number}");
+
+Num(num);
+Num(645);
+Num(78);
+Num(32679);
