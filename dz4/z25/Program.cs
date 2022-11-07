@@ -3,18 +3,26 @@
 // 2, 4 -> 16
 
 
-void Cube(int a, int b) {
+void Cube(int a, int b)
+{
     int i = 1;
     int sum = a;
-    while(i<b){
+    while (i < b)
+    {
         sum = sum * a;
         i++;
     }
     Console.WriteLine($"Степень {b} числа {a}  равен: {sum}");
 }
 
+
+
 Console.Write("Введите число для возведения в степень: ");
 int firstNum = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите степень числа: ");
 int secondNum = Convert.ToInt32(Console.ReadLine());
-Cube(firstNum,secondNum);
+if (firstNum == 0 || secondNum == 0)
+{
+    Console.Write("Некоректно введены значения");
+}
+else Cube(firstNum, secondNum);
