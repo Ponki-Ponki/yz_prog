@@ -3,7 +3,7 @@
 // 2, 4 -> 16
 
 
-void Cube(int a, int b)
+int Degree(int a, int b)
 {
     int i = 1;
     int sum = a;
@@ -12,9 +12,8 @@ void Cube(int a, int b)
         sum = sum * a;
         i++;
     }
-    Console.WriteLine($"Степень {b} числа {a}  равен: {sum}");
+    return sum;
 }
-
 
 
 Console.Write("Введите число для возведения в степень: ");
@@ -25,4 +24,4 @@ if (firstNum == 0 || secondNum == 0)
 {
     Console.Write("Некоректно введены значения");
 }
-else Cube(firstNum, secondNum);
+else Console.WriteLine($"Степень {secondNum} числа {firstNum}  равен: {Degree(firstNum, secondNum)}");

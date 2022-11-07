@@ -4,7 +4,8 @@
 // 9012 -> 12
 
 
-void SumNumbers(int a){
+int SumNumbers(int a)
+{
     int sumNam = 0;
     a = Math.Abs(a);
     while (a > 0)
@@ -12,8 +13,9 @@ void SumNumbers(int a){
         sumNam += a % 10;
         a /= 10;
     };
-    Console.WriteLine($"Сумма цифр числа равна: {sumNam}");
+    return sumNam;
 }
 
- Console.Write("Введите число: ");
- SumNumbers(Convert.ToInt32(Console.ReadLine()));
+Console.Write("Введите число: ");
+int sum = SumNumbers(Convert.ToInt32(Console.ReadLine()));
+Console.WriteLine($"Сумма цифр числа равна: {sum}");
