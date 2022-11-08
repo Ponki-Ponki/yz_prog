@@ -12,7 +12,7 @@ int SumNumbers(int a)
     {
         sumNam += a % 10;
         a /= 10;
-    };
+    }
     return sumNam;
 }
 
