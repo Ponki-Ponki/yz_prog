@@ -12,18 +12,29 @@ int[] CreateArray(int size)
     return array;
 }
 
-void CalckNum(int[] arr)
+int CalckNum(int[] arr)
 {
     int res = 0;
     for (int i = 0; i < arr.Length; i++)
     {
         if (arr[i] > 0) res++;
     }
-    Console.Write($"Чисел больше 0 :  {res}");
+    return res;
 }
+
+void PrintResult(int result)
+{
+    Console.WriteLine($"Чисел больше 0: {result}");
+}
+
 
 
 Console.Write("Сколько вы введёте чисел?");
 int mNum = Convert.ToInt32(Console.ReadLine());
-int[] arr = CreateArray(mNum);
-CalckNum(arr);
+if (mNum <= 0) Console.WriteLine("Введено не верное количесвто элементов");
+else
+{
+    int[] arr = CreateArray(mNum);
+    int result = CalckNum(arr);
+    PrintResult(result);
+}
