@@ -18,13 +18,13 @@ void PrintResult(string result)
 }
 
 
-Console.Write("Введите координату 1 линии 1ой точки :");
+Console.Write("Введите 1ый коофициент 1 линии :");
 int b1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите координату 1 линии 2ой точки :");
+Console.Write("Введите 2ой коофициент 1 линии  :");
 int k1 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите координату 2 линии 1ой точки :");
+Console.Write("Введите 1ый коофициент 2 линии  :");
 int b2 = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите координату 2 линии 2ой точки :");
+Console.Write("Введите 2ой коофициент 2 линии  :");
 int k2 = Convert.ToInt32(Console.ReadLine());
 PrintResult(PointCalck(b1, k1, b2, k2));
 
