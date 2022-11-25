@@ -30,8 +30,8 @@ void PrintMatrix(int[,] arr)
         Console.Write("[");
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-            if (j != arr.GetLength(1) - 1) Console.Write($"{arr[i, j],3} |");
-            else Console.Write($"{arr[i, j],3}");
+            if (j != arr.GetLength(1) - 1) Console.Write($"{arr[i, j],5} |");
+            else Console.Write($"{arr[i, j],5}");
         }
         Console.Write(" ]");
         Console.WriteLine();
@@ -46,7 +46,7 @@ int[,] MultiplMatrix(int[,] matrixOne, int[,] matrixTwo)
         for (int j = 0; j < multiplMatrix.GetLength(1); j++)
         {
             int sum = 0;
-            for (int l = 0; l < matrixTwo.GetLength(1); l++)
+            for (int l = 0; l < matrixTwo.GetLength(0); l++)
             {
                 sum += matrixOne[i, l] * matrixTwo[l, j];
             }
@@ -59,7 +59,7 @@ int[,] MultiplMatrix(int[,] matrixOne, int[,] matrixTwo)
 
 
 int[,] matrix1 = CreateMatrix(5, 4, -9, 10);
-int[,] matrix2 = CreateMatrix(4, 3, -9, 10);
+int[,] matrix2 = CreateMatrix(4, 7, -9, 10);
 Console.WriteLine("Двe матрицы, заполненные случайными вещественными числами:");
 PrintMatrix(matrix1);
 Console.WriteLine("");

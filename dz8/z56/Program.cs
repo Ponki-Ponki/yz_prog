@@ -51,7 +51,7 @@ int SumRows(int[] rows)
 
 int[] StringComparison(int[,] matrix)
 {
-    int[] minNum = new int[2] { 0, 0 };
+    int[] minNum = new int[2] { int.MaxValue, 0 };
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         int[] temp = new int[matrix.GetLength(1)];
@@ -75,7 +75,7 @@ void PrintResult(int[] result)
     Console.WriteLine($"Сумма элементов в этой строке: {result[0]}");
 }
 
-int[,] arr = CreateMatrix(4, 4, -9, 10);
+int[,] arr = CreateMatrix(4, 4, 1, 10);
 Console.WriteLine("Двумерный массив размером 4*4, заполненный случайными вещественными числами:");
 PrintMatrix(arr);
 int[] result = StringComparison(arr);
