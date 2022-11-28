@@ -35,7 +35,4 @@ void PrintResutNatureNumbers(int n)
 System.Console.WriteLine("Введите значение N:");
 int n = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine($"Все натуральные числа в промежутке от {n} до 1");
-// int n = 5;
 PrintResutNatureNumbers(n);
-// n = 8;
-// PrintResutNatureNumbers(n);
