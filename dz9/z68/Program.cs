@@ -9,8 +9,7 @@ int Akerman(int m, int n)
     int a = int.MinValue;
     if (m == 0) a = n + 1;
     if (m > 0 && n == 0) a = Akerman(m - 1, 1);
-    if (m > 0 && n > 0) a = Akerman(m - 1, Akerman(m, n - 1));
-    return a;
+    return a = Akerman(m - 1, Akerman(m, n - 1));
 }
 
 
