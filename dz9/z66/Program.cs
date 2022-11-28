@@ -18,6 +18,7 @@ System.Console.Write("Задайте значения N: ");
 int n = Convert.ToInt32(Console.ReadLine());
 System.Console.WriteLine($"Сумму натуральных элементов в промежутке от {m} до {n}: ");
 Console.Write($"M = {m}; N = {n} -> ");
-System.Console.WriteLine(m > n ? SumBetweenNAndM(m, n) : SumBetweenNAndM(n, m));
+if (m> 0 && n>0) Console.WriteLine(m > n ? SumBetweenNAndM(m, n) : SumBetweenNAndM(n, m));
+else Console.WriteLine("Введены некоректные числа")
 // System.Console.WriteLine(SumBetweenNAndM(1, 15));
 // System.Console.WriteLine(SumBetweenNAndM(4, 8));
